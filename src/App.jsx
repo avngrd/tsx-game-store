@@ -1,11 +1,13 @@
-import './App.css';
-import Skeleton from './components/Home';
+import { Routes, Route} from "react-router-dom";
+import HomePage from './pages/HomePage'
+import './scss/app.scss';
 
 function App() {
   return (
-    <div>
-      <Skeleton/>
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePage/>}>
+      </Route>
+    </Routes>
   );
 }
 
