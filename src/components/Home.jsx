@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Home = () => {
+const Skeleton = () => {
     return (
-        <div>StartStart</div>
+        <div className='skele'><p>hello</p></div>
     )
 }
+
+export default Skeleton
