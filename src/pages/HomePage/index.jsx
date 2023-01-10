@@ -1,13 +1,13 @@
 import React from 'react';
+import Header from '../../components/Header/Header';
 import styles from './HomePage.module.scss'
 
 const HomePage = () =>{
     return (
         <div className='App'>
-        <div>
-            <h1>asdasdasd</h1>
-            <p className={styles.root}>фывфы</p>
-        </div>
+            <Header/>
+            <div className='root'>
+            </div>
         </div>
     )
 }
