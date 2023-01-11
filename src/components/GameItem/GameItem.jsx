@@ -7,6 +7,7 @@ const GameItem = ({ game }) => {
         <span className="game-item__title">{game.title}</span>
         <div className="game-item__genre">{game.genres.map((genre) => genre)}</div>
         <div className="game-item__buy">Buy</div>
+        <div className="game-item__buy">Buy</div>
       </div>
     </div>
   );
