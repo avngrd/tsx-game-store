@@ -3,10 +3,11 @@ import {AiOutlineShoppingCart} from 'react-icons/ai'
 
 const Cart = () => {
     return(
-        <div>
-            <AiOutlineShoppingCart size={25} className='cart-icon'/>
+        <div className='cart-block'>
+            <AiOutlineShoppingCart size={30} className='cart-icon'/>
+            <span className='cart-total__price'>50€</span>
         </div>
     )
 }
 
-export default Cart
+export default Cart;
