@@ -8,8 +8,15 @@ const GameItem = ({ game }) => {
           <img src={game.image} alt={game.title} />
         </div>
         <span className="game-item__title">{game.title}</span>
-        <div className="game-item__genre">{game.genres.map((genre) => genre)}</div>
-        <div className="game-item__buy">Buy</div>
+        <div className="game-item__genre">
+          <ul className="game-item__genre-list">
+            {game.genres.map((genre) => (
+              <li key={game.id}>{genre}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="game-item__price">{game.price} €</div>
+        <button className="game-item__buy">Buy</button>
       </div>
     </div>
   );
