@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import GameItem from '../../components/GameItem/GameItem';
 
-import styles from './HomePage.module.scss';
+// import styles from './HomePage.module.scss';
 
 const GAMES = [
   {
