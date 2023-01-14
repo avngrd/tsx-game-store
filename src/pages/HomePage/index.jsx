@@ -53,7 +53,7 @@ const GAMES = [
     price: 60,
     id: 5,
     description:
-      "Tom Clancy's Rainbow Six Осада – это продолжение нашумевшего шутера от первого лица, разработанного студией Ubisoft Montreal.",
+      "Tom Clancy's Rainbow Six Осада - это продолжение нашумевшего шутера от первого лица, разработанного студией Ubisoft Montreal.",
   },
   {
     image: 'img/assassins_creed_valhalla.png',

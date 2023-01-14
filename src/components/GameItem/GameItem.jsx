@@ -1,6 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setItemInCart } from '../../redux/cart/CartSlice';
 
 const GameItem = ({ game }) => {
+  const dispatch = useDispatch();
+  const handleClick = (event) => {
+    event.stopPropagation();
+    dispatch(setItemInCart(game));
+  };
+
   return (
     <div className="game-item">
       <div className="game-item__details">
@@ -16,7 +24,9 @@ const GameItem = ({ game }) => {
           </ul>
         </div>
         <div className="game-item__price">{game.price} €</div>
-        <button className="game-item__buy">Buy</button>
+        <button className="game-item__buy" onClick={handleClick}>
+          Buy
+        </button>
       </div>
     </div>
   );
