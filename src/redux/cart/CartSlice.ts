@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type GameItem = {
+export type GameItem = {
   image: string;
   title: string;
   genres: string[];

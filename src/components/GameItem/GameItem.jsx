@@ -1,12 +1,18 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { setItemInCart } from '../../redux/cart/CartSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteItemFromCart, setItemInCart } from '../../redux/cart/CartSlice';
 
 const GameItem = ({ game }) => {
   const dispatch = useDispatch();
+  const items = useSelector((state) => state.cart.itemsInCart);
+  const isItemInCart = items.some((item) => item.id === game.id);
   const handleClick = (event) => {
     event.stopPropagation();
-    dispatch(setItemInCart(game));
+    if (isItemInCart) {
+      dispatch(deleteItemFromCart(game.id));
+    } else {
+      dispatch(setItemInCart(game));
+    }
   };
 
   return (
@@ -24,8 +30,11 @@ const GameItem = ({ game }) => {
           </ul>
         </div>
         <div className="game-item__price">{game.price} €</div>
-        <button className="game-item__buy" onClick={handleClick}>
-          Buy
+        <button
+          className="game-item__buy"
+          onClick={handleClick}
+          type={isItemInCart ? 'secondary' : 'primary'}>
+          {isItemInCart ? 'Remove order' : ' Buy'}
         </button>
       </div>
     </div>
