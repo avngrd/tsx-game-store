@@ -10,6 +10,7 @@ const Cart = () => {
   const totalPrice = calcTotalPrice(items);
   return (
     <div className="cart-block">
+      {items.length > 0 ? <span className="cart-game__count">{items.length}</span> : null}
       <AiOutlineShoppingCart
         size={30}
         className="cart-icon"

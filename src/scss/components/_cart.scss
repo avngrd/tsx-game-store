@@ -51,3 +51,32 @@
   color: white;
   font-size: 18px;
 }
+
+.cart-game__count {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(46, 139, 192, 0.96);
+  border-radius: 15px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 2;
+  left: 15px;
+  top: -10px;
+}
+
+.cart-item {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item__price {
+  display: flex;
+  align-items: center;
+}
