@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserHistory } from '@remix-run/router';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteItemFromCart, setItemInCart } from '../../redux/cart/CartSlice';
 import { setCurrentGame } from '../../redux/games/GamesSlice';
@@ -19,15 +20,17 @@ const GameItem = ({ game }) => {
 
   const gameClick = () => {
     const history = createBrowserHistory();
-    history.push(`/app${game.title}`);
+    history.push(`/${game.title}`);
     dispatch(setCurrentGame(game));
   };
   return (
     <div className="game-item" onClick={gameClick}>
       <div className="game-item__details">
-        <div className="game-cover">
-          <img src={game.image} alt={game.title} />
-        </div>
+        <Link to={`/${game.title}`}>
+          <div className="game-cover">
+            <img src={game.image} alt={game.title} />
+          </div>
+        </Link>
         <span className="game-item__title">{game.title}</span>
         <div className="game-item__genre">
           <ul className="game-item__genre-list">
