@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Header from '../../components/Header/Header';
 
 export const GamePage = () => {
   const game = useSelector((state) => state.game.currentGame);
@@ -8,7 +7,6 @@ export const GamePage = () => {
 
   return (
     <div className="game-page">
-      <Header />
       <h1 className="game-page__title">{game.title}</h1>
       <div className="game-page__content">
         <div className="game-page__left">
