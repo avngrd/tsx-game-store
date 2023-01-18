@@ -35,7 +35,7 @@ const GameItem = ({ game }) => {
         <div className="game-item__genre">
           <ul className="game-item__genre-list">
             {game.genres.map((genre) => (
-              <li key={game.id}>{genre}</li>
+              <li key={game.genre}>{genre}</li>
             ))}
           </ul>
         </div>

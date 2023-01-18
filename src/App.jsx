@@ -3,7 +3,7 @@ import HomePage from './pages/HomePage';
 import { Provider } from 'react-redux';
 import './scss/app.scss';
 import { store } from './redux/store';
-import { GamePage } from './pages/HomePage/GamePage/GamePage';
+import { GamePage } from './pages/GamePage/GamePage';
 
 function App() {
   return (

@@ -73,7 +73,7 @@ const HomePage = () => {
       <Header />
       <div className="games">
         {GAMES.map((game) => (
-          <GameItem game={game} key={game.id} />
+          <GameItem game={game} key={game.title} />
         ))}
       </div>
     </div>
