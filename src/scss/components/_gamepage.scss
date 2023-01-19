@@ -1,0 +1,57 @@
+.game-page__content {
+  display: flex;
+}
+
+.game-page__left {
+  width: 70%;
+}
+
+.game-page__right {
+  width: 30%;
+}
+
+.game-page__title {
+  color: white;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.game-page__image {
+  width: 350px;
+  min-height: 150px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.game-page__description {
+  color: white;
+  width: 350px;
+  margin-top: 10px;
+}
+
+.secondary-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.game-page__genre-list {
+  display: flex;
+  li {
+    border: 1px solid rgba(46, 139, 192, 0.96);
+    border-radius: 15px;
+    padding: 5px 5px;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+}
+
+.game-page__item-buy {
+  color: white;
+  padding: 5px 5px;
+  background-color: rgba(46, 139, 192, 0.96);
+  border-radius: 15px;
+  border: none;
+  font-size: 18px;
+  margin-top: 10px;
+}
