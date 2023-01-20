@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { calcTotalPrice } from '../utils/utils';
 import { CartMenu } from '../CartMenu/CartMenu';
+import { createBrowserHistory } from '@remix-run/router';
 
 const Cart = () => {
   const [isCartMenuVisible, setIsCartMenuVisible] = React.useState(false);
   const items = useSelector((state) => state.cart.itemsInCart);
   const totalPrice = calcTotalPrice(items);
+  const history = createBrowserHistory();
+
+  const handleClick = useCallback(() => {
+    setIsCartMenuVisible(false);
+    history.push('/order');
+  }, [history]);
+
   return (
     <div className="cart-block">
       {items.length > 0 ? <span className="cart-game__count">{items.length}</span> : null}
@@ -17,7 +25,7 @@ const Cart = () => {
         onClick={() => setIsCartMenuVisible(!isCartMenuVisible)}
       />
       {totalPrice > 0 ? <span className="cart-total__price">{totalPrice}€</span> : null}
-      {isCartMenuVisible && <CartMenu items={items} onClick={() => null} />}
+      {isCartMenuVisible && <CartMenu items={items} onClick={handleClick} />}
     </div>
   );
 };
