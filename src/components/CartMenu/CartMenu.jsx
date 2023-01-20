@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CartItem } from '../CartItem';
 import { calcTotalPrice } from '../utils/utils';
 
@@ -17,9 +18,11 @@ export const CartMenu = ({ items, onClick }) => {
           <div className="cart-menu__total-price">
             <span>Summary:{calcTotalPrice(items)} €</span>
           </div>
-          <button type="primary" onClick={onClick} className="cart-menu__order">
-            Order
-          </button>
+          <Link to="/order">
+            <button type="primary" onClick={onClick} className="cart-menu__order">
+              Order
+            </button>
+          </Link>
         </div>
       ) : null}
     </div>
