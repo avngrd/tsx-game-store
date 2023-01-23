@@ -11,15 +11,17 @@ export const OrderPage = () => {
   }
 
   return (
-    <div className="order-page">
-      <div className="order-page__left">
-        {items.map((game) => (
-          <OrderItem game={game} />
-        ))}
+    <>
+      <div className="order-page">
+        <div className="order-page__left">
+          {items.map((game) => (
+            <OrderItem game={game} />
+          ))}
+        </div>
       </div>
-      <div className="order-page__right">
-        <div className="order-page__total-price">{calcTotalPrice(items)}</div>
+      <div className="order-page__total-price">
+        {items.length} Games price:{calcTotalPrice(items)} €
       </div>
-    </div>
+    </>
   );
 };
