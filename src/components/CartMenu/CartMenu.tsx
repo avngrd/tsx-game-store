@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { GameArrayProps } from '../../pages/HomePage';
 import { CartItem } from '../CartItem';
 import { calcTotalPrice } from '../utils/utils';
 
-export const CartMenu = ({ items, onClick }) => {
+type CartMenuProps = {
+  items: GameArrayProps[];
+  onClick: () => void;
+};
+
+export const CartMenu: React.FC<CartMenuProps> = ({ items, onClick }) => {
   return (
     <div className="cart-menu">
       <div className="cart-menu__games-list">
@@ -19,7 +25,7 @@ export const CartMenu = ({ items, onClick }) => {
             <span>Summary:{calcTotalPrice(items)} €</span>
           </div>
           <Link to="/order">
-            <button type="primary" onClick={onClick} className="cart-menu__order">
+            <button onClick={onClick} className="cart-menu__order">
               Order
             </button>
           </Link>

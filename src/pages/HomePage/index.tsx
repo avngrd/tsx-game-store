@@ -3,6 +3,16 @@ import GameItem from '../../components/GameItem/GameItem';
 
 // import styles from './HomePage.module.scss';
 
+export type GameArrayProps = {
+  image: string;
+  title: string;
+  genres: string[];
+  price: number;
+  video: string;
+  id: number;
+  description: string;
+};
+
 const GAMES = [
   {
     image: 'img/forza_5.jpeg',

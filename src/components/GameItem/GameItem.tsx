@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteItemFromCart, setItemInCart } from '../../redux/cart/CartSlice';
 import { setCurrentGame } from '../../redux/games/GamesSlice';
 
-const GameItem = ({ game }) => {
+const GameItem: React.FC = ({ game }) => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.itemsInCart);
   const isItemInCart = items.some((item) => item.id === game.id);
@@ -40,10 +40,7 @@ const GameItem = ({ game }) => {
           </ul>
         </div>
         <div className="game-item__price">{game.price} €</div>
-        <button
-          className="game-item__buy"
-          onClick={handleClick}
-          type={isItemInCart ? 'secondary' : 'primary'}>
+        <button className="game-item__buy" onClick={handleClick}>
           {isItemInCart ? 'Remove order' : ' Buy'}
         </button>
       </div>

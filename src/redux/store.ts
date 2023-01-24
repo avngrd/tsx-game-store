@@ -8,3 +8,5 @@ export const store = configureStore({
     game: GamesSlice,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;

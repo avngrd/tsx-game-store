@@ -4,10 +4,11 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { calcTotalPrice } from '../utils/utils';
 import { CartMenu } from '../CartMenu/CartMenu';
 import { createBrowserHistory } from '@remix-run/router';
+import { RootState } from '../../redux/store';
 
-const Cart = () => {
+const Cart: React.FC = () => {
   const [isCartMenuVisible, setIsCartMenuVisible] = React.useState(false);
-  const items = useSelector((state) => state.cart.itemsInCart);
+  const items = useSelector((state: RootState) => state.cart.itemsInCart);
   const totalPrice = calcTotalPrice(items);
   const history = createBrowserHistory();
 
