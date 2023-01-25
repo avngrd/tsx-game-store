@@ -4,17 +4,24 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteItemFromCart, setItemInCart } from '../../redux/cart/CartSlice';
 import { setCurrentGame } from '../../redux/games/GamesSlice';
+import { RootState } from '../../redux/store';
+import { GameArrayProps } from '../../pages/HomePage';
 
-const GameItem: React.FC = ({ game }) => {
+type GameItemProps = {
+  game: GameArrayProps;
+};
+
+const GameItem: React.FC<GameItemProps> = ({ game }) => {
   const dispatch = useDispatch();
-  const items = useSelector((state) => state.cart.itemsInCart);
+  const items = useSelector((state: RootState) => state.cart.itemsInCart);
   const isItemInCart = items.some((item) => item.id === game.id);
-  const handleClick = (event) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     if (isItemInCart) {
       dispatch(deleteItemFromCart(game.id));
     } else {
       dispatch(setItemInCart(game));
+      console.log(event);
     }
   };
 
@@ -23,6 +30,7 @@ const GameItem: React.FC = ({ game }) => {
     history.push(`/${game.title}`);
     dispatch(setCurrentGame(game));
   };
+  console.log(game);
   return (
     <div className="game-item" onClick={gameClick}>
       <div className="game-item__details">
@@ -34,8 +42,8 @@ const GameItem: React.FC = ({ game }) => {
         <span className="game-item__title">{game.title}</span>
         <div className="game-item__genre">
           <ul className="game-item__genre-list">
-            {game.genres.map((genre) => (
-              <li key={game.genre}>{genre}</li>
+            {game.genres.map((genre: string) => (
+              <li key={game.title}>{genre}</li>
             ))}
           </ul>
         </div>
