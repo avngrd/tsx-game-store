@@ -7,7 +7,7 @@ import { setCurrentGame } from '../../redux/games/GamesSlice';
 import { RootState } from '../../redux/store';
 import { GameArrayProps } from '../../pages/HomePage';
 
-type GameItemProps = {
+export type GameItemProps = {
   game: GameArrayProps;
 };
 

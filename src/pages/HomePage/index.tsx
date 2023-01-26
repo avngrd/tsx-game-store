@@ -1,8 +1,6 @@
 import React from 'react';
 import GameItem from '../../components/GameItem/GameItem';
 
-// import styles from './HomePage.module.scss';
-
 export type GameArrayProps = {
   image: string;
   title: string;
@@ -76,7 +74,7 @@ const GAMES = [
   },
 ];
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="homepage">
       <div className="games">
