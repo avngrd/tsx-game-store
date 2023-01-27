@@ -2,11 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteItemFromCart, setItemInCart } from '../../redux/cart/CartSlice';
+import { RootState } from '../../redux/store';
 
-export const GamePage = () => {
+export const GamePage: React.FC = () => {
   const dispatch = useDispatch();
-  const game = useSelector((state) => state.game.currentGame);
-  const items = useSelector((state) => state.cart.itemsInCart);
+  const game = useSelector((state: RootState) => state.game.currentGame);
+  const items = useSelector((state: RootState) => state.cart.itemsInCart);
   if (!game) return null;
   const isItemInCart = items.some((item) => item.id === game.id);
 
