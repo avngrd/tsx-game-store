@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+// @ts-ignore
+const initialState: GameSliceState = {
   currentGame: null,
 };
 

@@ -11,7 +11,7 @@ export const GamePage: React.FC = () => {
   if (!game) return null;
   const isItemInCart = items.some((item) => item.id === game.id);
 
-  const handleClick = (event) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     if (isItemInCart) {
       dispatch(deleteItemFromCart(game.id));
@@ -32,10 +32,10 @@ export const GamePage: React.FC = () => {
           <p className="game-page__description">{game.description}</p>
           <p className="secondary-text">Popular tags: </p>
           <ul className="game-page__genre-list">
-            {game.genres.map((genre) => (
+            {game.genres.map((genre: string[]) => (
               <motion.li
                 className="game-page__genre"
-                key={genre}
+                key={genre[1]}
                 animate={{ y: 5 }}
                 transition={{ repeat: Infinity, duration: 0.5 }}>
                 {genre}
