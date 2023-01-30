@@ -1,4 +1,5 @@
 import React from 'react';
+import anime from 'animejs';
 import GameItem from '../../components/GameItem/GameItem';
 
 export type GameArrayProps = {
@@ -75,12 +76,22 @@ const GAMES = [
 ];
 
 const HomePage: React.FC = () => {
+  anime({
+    targets: '.homepage-logo__steam',
+    translateY: 150,
+    direction: 'alternate',
+    loop: true,
+    easing: 'easeInOutSine',
+  });
   return (
     <div className="homepage">
       <div className="games">
         {GAMES.map((game) => (
           <GameItem game={game} key={game.title} />
         ))}
+      </div>
+      <div className="homepage-logos">
+        <img className="homepage-logo__steam" src="img/steam.png" alt="Steam" />
       </div>
     </div>
   );
