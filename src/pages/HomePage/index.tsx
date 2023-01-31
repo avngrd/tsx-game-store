@@ -76,13 +76,26 @@ const GAMES = [
 ];
 
 const HomePage: React.FC = () => {
-  anime({
-    targets: '.homepage-logo__steam',
-    translateY: 150,
-    direction: 'alternate',
-    loop: true,
-    easing: 'easeInOutSine',
-  });
+  const animateLogos = () => {
+    anime({
+      targets: '.homepage-logo__steam',
+      translateY: 70,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine',
+    });
+    anime({
+      targets: '.homepage-logo__origin',
+      translateY: 70,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine',
+    });
+  };
+
+  React.useEffect(() => {
+    animateLogos();
+  }, []);
   return (
     <div className="homepage">
       <div className="games">
@@ -92,6 +105,7 @@ const HomePage: React.FC = () => {
       </div>
       <div className="homepage-logos">
         <img className="homepage-logo__steam" src="img/steam.png" alt="Steam" />
+        <img className="homepage-logo__origin" src="img/origin.png" alt="Origin" />
       </div>
     </div>
   );

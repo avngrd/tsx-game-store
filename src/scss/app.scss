@@ -31,13 +31,32 @@ code {
   width: 70px;
   height: 70px;
   top: -200px;
-  left: -500px;
+  left: -400px;
   position: absolute;
 
-  border: 1px solid white;
-  border-radius: 15px;
   padding: 8px 8px;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.homepage-logo__origin {
+  width: 70px;
+  height: 70px;
+  top: -140px;
+  left: -200px;
+  position: absolute;
+
+  padding: 8px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 a {
