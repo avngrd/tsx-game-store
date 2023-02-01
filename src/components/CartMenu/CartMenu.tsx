@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import { GameArrayProps } from '../../pages/HomePage';
 import { CartItem } from '../CartItem';
 import { calcTotalPrice } from '../utils/utils';
-type game ={
-count:number;
-} 
+
 type CartMenuProps = {
   items: GameArrayProps[];
   onClick: () => void;
