@@ -86,7 +86,35 @@ const HomePage: React.FC = () => {
     });
     anime({
       targets: '.homepage-logo__origin',
+      translateY: 90,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine',
+    });
+    anime({
+      targets: '.homepage-logo__eg',
+      translateY: 110,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine',
+    });
+    anime({
+      targets: '.homepage-logo__steam-right',
       translateY: 70,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine',
+    });
+    anime({
+      targets: '.homepage-logo__origin-right',
+      translateY: 90,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine',
+    });
+    anime({
+      targets: '.homepage-logo__eg-right',
+      translateY: 110,
       direction: 'alternate',
       loop: true,
       easing: 'easeInOutSine',
@@ -103,9 +131,17 @@ const HomePage: React.FC = () => {
           <GameItem game={game} key={game.title} />
         ))}
       </div>
-      <div className="homepage-logos">
-        <img className="homepage-logo__steam" src="img/steam.png" alt="Steam" />
-        <img className="homepage-logo__origin" src="img/origin.png" alt="Origin" />
+      <div>
+        <div className="homepage-logos">
+          <img className="homepage-logo__steam" src="img/steam.png" alt="Steam" />
+          <img className="homepage-logo__origin" src="img/origin.png" alt="Origin" />
+          <img className="homepage-logo__eg" src="img/eg.png" alt="EpicGames" />
+        </div>
+        <div className="homepage-logos__right">
+          <img className="homepage-logo__steam-right" src="img/steam.png" alt="Steam" />
+          <img className="homepage-logo__origin-right" src="img/origin.png" alt="Origin" />
+          <img className="homepage-logo__eg-right" src="img/eg.png" alt="EpicGames" />
+        </div>
       </div>
     </div>
   );

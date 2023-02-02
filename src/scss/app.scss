@@ -59,6 +59,74 @@ code {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.homepage-logo__eg {
+  width: 70px;
+  height: 70px;
+  top: -140px;
+  left: -300px;
+  position: absolute;
+
+  padding: 8px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.homepage-logos__right {
+  position: relative;
+}
+
+.homepage-logo__steam-right {
+  width: 70px;
+  height: 70px;
+  top: -700px;
+  left: 1400px;
+  position: absolute;
+
+  padding: 8px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.homepage-logo__origin-right {
+  width: 70px;
+  height: 70px;
+  top: -650px;
+  left: 1200px;
+  position: absolute;
+
+  padding: 8px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.homepage-logo__eg-right {
+  width: 70px;
+  height: 70px;
+  top: -600px;
+  left: 1300px;
+  position: absolute;
+
+  padding: 8px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 a {
   color: white;
   text-decoration: none;
