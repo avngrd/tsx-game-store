@@ -16,7 +16,7 @@ const GAMES = [
   {
     image: 'img/forza_5.jpeg',
     title: 'Forza Horizon 5',
-    genres: ['Гонки', 'Симулятор', 'Открытый мир'],
+    genres: ['Race', 'Simulator', 'Open World'],
     price: 40,
     video: 'https://www.youtube.com/embed/FYH9n37B7Yw',
     id: 1,
@@ -26,7 +26,7 @@ const GAMES = [
   {
     image: 'img/dota2.jpg',
     title: 'Dota 2',
-    genres: ['Стратегия', 'Экшен', 'МОВА'],
+    genres: ['Strategy', 'Action', 'МОВА'],
     video: 'https://www.youtube.com/watch?v=Xx0YUuvW4wA',
     price: 10,
     id: 2,
@@ -36,7 +36,7 @@ const GAMES = [
   {
     image: 'img/life_is_strange_true_colors.jpeg',
     title: 'Life is Strange True Colors',
-    genres: ['Глубокий сюжет', 'Протагонистка'],
+    genres: ['Magical', 'Mystic'],
     video: 'https://www.youtube.com/embed/b6CkzwVAr0M',
     price: 30,
     id: 3,
@@ -46,7 +46,7 @@ const GAMES = [
   {
     image: 'img/gta_v.jpeg',
     title: 'Grand Theft Auto V',
-    genres: ['Открытый мир', 'Экшен'],
+    genres: ['Open World', 'Action'],
     video: 'https://www.youtube.com/embed/QkkoHAzjnUs',
     price: 40,
     id: 4,
@@ -57,7 +57,7 @@ const GAMES = [
     image: 'img/rainbow_siege.jpeg',
     title: "Tom Clancy's Rainbow Six® Siege",
     video: 'https://www.youtube.com/embed/6wlvYh0h63k',
-    genres: ['Тактика', 'Шутер'],
+    genres: ['Tactics', 'Shooter'],
     price: 60,
     id: 5,
     description:
@@ -66,7 +66,7 @@ const GAMES = [
   {
     image: 'img/assassins_creed_valhalla.png',
     title: 'Assassin’s Creed Valhalla',
-    genres: ['Паркур', 'РПГ', 'Открытый мир'],
+    genres: ['Mystic', 'RPG', 'Open World'],
     video: 'https://www.youtube.com/embed/ssrNcwxALS4',
     price: 78,
     id: 6,
