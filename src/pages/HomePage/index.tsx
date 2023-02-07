@@ -2,10 +2,6 @@ import React from 'react';
 import anime from 'animejs';
 import GameItem from '../../components/GameItem/GameItem';
 
-export type GameKops = {
-  image: string;
-};
-
 export type GameArrayProps = {
   image: string;
   title: string;
