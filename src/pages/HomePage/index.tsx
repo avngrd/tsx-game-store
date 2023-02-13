@@ -73,6 +73,16 @@ const GAMES = [
     description:
       'Assassin’s Creed Valhalla — мультиплатформенная компьютерная игра в жанре action/RPG, разработанная студией Ubisoft Montreal под издательством компании Ubisoft. Является двенадцатой игрой в серии игр Assassin’s Creed.',
   },
+  {
+    image: 'img/assassins_creed_valhalla.png',
+    title: 'Assassin’s Creed Valhalla',
+    genres: ['Mystic', 'RPG', 'Open World'],
+    video: 'https://www.youtube.com/embed/ssrNcwxALS4',
+    price: 78,
+    id: 6,
+    description:
+      'Assassin’s Creed Valhalla — мультиплатформенная компьютерная игра в жанре action/RPG, разработанная студией Ubisoft Montreal под издательством компании Ubisoft. Является двенадцатой игрой в серии игр Assassin’s Creed.',
+  },
 ];
 
 const HomePage: React.FC = () => {
