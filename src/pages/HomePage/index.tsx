@@ -11,6 +11,13 @@ export type GameArrayProps = {
   id: number;
   description: string;
 };
+export type GameArrayssProps = {
+  image: string;
+  title: string;
+  genres: string[];
+  price: number;
+  video: string;
+};
 
 const GAMES = [
   {
