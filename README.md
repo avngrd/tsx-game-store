@@ -1,12 +1,11 @@
-# Getting Started with Create React App
+# TSX Game Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ToolKit:
+ReactJS 18
+TypeScript
+Redux Toolkit
+React Router v6
+React Hooks
+Anime.js
+CSS-Modules / SCSS
+FramerMotion
