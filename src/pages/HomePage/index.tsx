@@ -12,6 +12,11 @@ export type GameArrayProps = {
   description: string;
 };
 
+export type GaasdrrayProps = {
+  image: string;
+  title: string;
+};
+
 const GAMES = [
   {
     image: 'img/forza_5.jpeg',
