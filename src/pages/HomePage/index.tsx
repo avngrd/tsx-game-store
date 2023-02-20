@@ -12,6 +12,12 @@ export type GameArrayProps = {
   description: string;
 };
 
+export type dsadProps = {
+  image: string;
+  id: number;
+  description: string;
+};
+
 const GAMES = [
   {
     image: 'img/forza_5.jpeg',
